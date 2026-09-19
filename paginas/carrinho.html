@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+
+    <link rel="icon" href="../imagens/carrinho/favicon-16x16.png">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <style>
+        .info-item > span{
+            color: #0a4b10;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <div id="logo-produto">
+            
+            <a href="../index.html">
+                <img src="../imagens/SHOP-TADS.png" alt="Shop TADS" width="50" height="45">
+            </a>
+            <div class="dados-usuario">
+                <p><i>Olá, Mr.</i>
+                </p>
+
+                <div id="usuario">
+                    <a href="">Minha conta ></a>
+                </div>
+                <div>
+                    <a href="">Sair</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pesquisa">
+            <input type="search" placeholder="Buscar produto">
+            <button>Pesquisar</button>
+        </div>
+
+        <nav class="nav">
+            <a href="../index.html">Início</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+              <a href="carrinho.html"><img src="../imagens/carrinho/carrinho.png" alt="carrinho"
+                    width="35px"></a>
+        </nav>
+
+    </header>
+
+    <main class="pagina-carrinho">
+
+    <h1>Meu Carrinho</h1>
+
+    <div class="layout-carrinho">
+
+        
+        <section class="itens-carrinho">
+
+            <h2>Produtos</h2>
+
+            <div class="item">
+
+                <img src="../imagens/produtos/Notebook-Lenovo-Ideapad-Slim-3.webp"
+                     alt="Notebook" width="90">
+
+                <div class="info-item">
+                    <h3>Notebook Lenovo Ideapad Slim 3</h3>
+                    <span>R$ 4.899,00</span>
+                </div>
+
+                <div class="qtd">
+                    <label>Qtd.</label>
+                    <input type="number" value="1" min="1">
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <img src="../imagens/produtos/processador-amd-ryzen-7-5700x.webp"
+                     alt="Ryzen" width="90">
+
+                <div class="info-item">
+                    <h3>Processador AMD Ryzen 7 5700X</h3>
+                    <span>R$ 1.999,00</span>
+                </div>
+
+                <div class="qtd">
+                    <label>Qtd.</label>
+                    <input type="number" value="1" min="1">
+                </div>
+
+            </div>
+
+            <div class="item">
+
+                <img src="../imagens/produtos/monitor-gamer-asus.webp"
+                     alt="Monitor" width="90">
+
+                <div class="info-item">
+                    <h3>Monitor Gamer ASUS ROG Strix</h3>
+                    <span>R$ 2.499,00</span>
+                </div>
+
+                <div class="qtd">
+                    <label>Qtd.</label>
+                    <input type="number" value="1" min="1">
+                </div>
+
+            </div>
+
+            <a class="voltar-produtos" href="produtos.html">
+                ← Continuar comprando
+            </a>
+
+        </section>
+
+    
+        <div class="resumo">
+
+            <h2>Resumo do Pedido</h2>
+
+            <p><strong>Quantidade:</strong> 3 itens</p>
+
+            <p><strong>Subtotal:</strong> R$ 9.397,00</p>
+
+            <p><strong>Frete:</strong> Grátis</p>
+
+            <hr>
+
+            <h3>Total: <span style="color: #1b501f">$ 9.397,00</span></h3>
+
+            <a class="botao-finalizar"
+               href="sucesso-pedido.html">
+                Finalizar Pedido
+            </a>
+
+        </div>
+
+    </div>
+
+    <section class="endereco">
+
+        <h2>Endereço de Entrega</h2>
+
+        <p><strong>Nome:</strong> Anderson Torres </p>
+
+        <p><strong>Endereço:</strong> Rua formosa, nº 120 </p>
+
+        <p><strong>Bairro:</strong> Centro </p>
+
+        <p><strong>Cidade:</strong> Formosa - GO </p>
+
+        <p><strong>CEP:</strong> 73800-000 </p>
+
+    </section>
+
+</main>
+
+    <footer>
+
+        <div class="redes-sociais">
+
+            <a href="https://facebook.com" target="_blank">
+                <img src="../imagens/redes/logo-facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://instagram.com" target="_blank">
+                <img src="../imagens/redes/logo-instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="../imagens/redes/logo-youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+        <p>&copy 2026 Shop TADS</p>
+
+    </footer>
+
+</body>
+</html>

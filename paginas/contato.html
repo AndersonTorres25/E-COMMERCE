@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" href="../imagens/index/favicon.ico"
+
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <div id="logo-produto">
+
+            <a href="../index.html">
+                <img src="../imagens/SHOP-TADS.png" alt="Logo Shop TADS" width="50" height="45">
+            </a>
+            <div class="dados-usuario">
+                <p><i>Olá, Mr.</i>
+                </p>
+
+                <div id="usuario">
+                    <a href="">Minha conta ></a>
+                </div>
+                <div>
+                    <a href="">Sair</a>
+                </div>
+            </div>
+        </div>
+         <div class="pesquisa">
+            <input type="search" placeholder="Buscar produto" />
+            <button>Pesquisar</button>
+        </div>
+       
+
+        <nav class="nav">
+            <a href="../index.html">Início</a>
+            <a href="../paginas/produtos.html">Produtos</a>
+            <a href="../paginas/contato.html" target="_self">Contato</a>
+            <a href="../paginas/carrinho.html"><img src="../imagens/carrinho/carrinho.png" alt="carrinho"
+                    width="35px"></a>
+        </nav>
+
+    </header>
+
+    <main class="contato">
+        <form class="formulario" method="get" action="sucesso-contato.html">
+            <h1>Entre em contato</h1>
+
+            <label>Nome *</label>
+            <input type="text" name="nome" required autofocus placeholder="Digite um nome" />
+
+            <label>E-mail *</label>
+            <input type="email" name="email" required placeholder="Digite um e-mail">
+
+            <label>Telefone</label>
+            <input type="tel" name="Telefone" pattern="[0-9]{10,11}" placeholder="Digite um numero de telefone" />
+
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto">
+                <option value="none" disabled selected>selecione um assunto</option>
+                <option>Compra</option>
+                <option>Suporte</option>
+                <option>Troca</option>
+                <option>Outros</option>
+            </select>
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" rows="8" cols="40" placeholder="Digite o texto aqui."></textarea>
+            <input class="botao-enviar" type="submit" value="Enviar mensagem" />
+
+        </form>
+
+    </main>
+
+    <footer>
+
+        <div class="redes-sociais">
+
+            <a href="https://facebook.com" target="_blank">
+                <img src="../imagens/redes/logo-facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://instagram.com" target="_blank">
+                <img src="../imagens/redes/logo-instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="../imagens/redes/logo-youtube.svg" alt="YouTube">
+            </a>
+
+        </div>
+
+        <p>&copy 2026 Shop TADS</p>
+
+    </footer>
+
+</body>
+
+</html>
