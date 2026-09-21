@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="../css/estilo.css" rel="stylesheet" />
+    <style>
+        #login {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 10px 5px #7496c9;
+            max-width: 100%;
+            min-width: 350px;
+            gap: 10px;
+        }
+
+        body {
+            box-sizing: content-box;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <div id="logo-produto">
+
+            <a href="../index.html">
+                <img src="../imagens/SHOP-TADS.png" alt="Logo Shop TADS" width="50" height="45">
+            </a>
+
+            <div class="dados-usuario">
+                <p><i>Olá, Mr.</i>
+                </p>
+
+                <div id="usuario">
+                    <div id="usuario">
+                        <a href="">Cadastrar></a>
+                    </div>
+                    <div>
+                        <a href="login.html">Logar</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pesquisa">
+                <input type="search" placeholder="Buscar produto" />
+                <button>Pesquisar</button>
+            </div>
+
+
+            <nav class="nav">
+                <a href="../index.html">Início</a>
+                <a href="../paginas/produtos.html">Produtos</a>
+                <a href="../paginas/contato.html" target="_self">Contato</a>
+                <a href="../paginas/carrinho.html"><img src="../imagens/carrinho/carrinho.png" alt="carrinho"
+                        width="35px"></a>
+            </nav>
+    </header>
+
+
+
+    <form id="form-login">
+        <div id="login">
+            <label for="campo-login">Login:</label>
+            <input id="campo-login" name="login" type="email" required placeholder="Digite o seu login aqui.">
+
+            <label for="campo-senha">Senha:</label>
+            <input id="campo-senha" name="senha" type="password" required placeholder="Digite a sua senha aqui.">
+
+            <!-- Mudamos o type para "submit" para acionar o formulário -->
+            <input id="botao-entrar" name="botao-entrar" type="submit" value="Entrar">
+        </div>
+    </form>
+
+
+    <script src="js/javaScript.js">  </script>
+
+
+</body>
+
+</html>
