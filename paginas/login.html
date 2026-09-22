@@ -91,17 +91,17 @@
 
         <form id="form-login">
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">E-mail *</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
-                <div id="emailHelp" class="form-text">Nós nunca iremos compartilhar seu e-mail com ninguém.</div>
+                <label for="email" class="form-label">E-mail *</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" required>
+                <div id="emailHelp" class="form-text" >Nós nunca iremos compartilhar seu e-mail com ninguém.</div>
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Senha *</label>
-                <input type="password" class="form-control" id="senha" required>
+                <label for="senha" class="form-label">Senha *</label>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
             </div>
             <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="mostrarSenha">
-                <label class="form-check-label" for="exampleCheck1">Mostrar os dados</label>
+                <input type="checkbox" class="form-check-input" id="mostrarSenha" name="checar">
+                <label class="form-check-label" for="mostrarSenha">Mostrar senha</label>
             </div>
             <button type="submit" class="btn btn-primary btn-entrar-login">Entrar</button>
         </form>

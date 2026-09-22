@@ -24,11 +24,11 @@ if (formulario) {
 
         e.preventDefault();
 
-        const email = document.querySelector("#email").value;
+        const email = document.querySelector("#email").value.toUpperCase();
         const senha = document.querySelector("#senha").value;
 
         const usuario = usuarios.find(function (u) {
-            return u.email === email && u.senha === senha;
+            return u.email.toLocaleUpperCase() === email && u.senha === senha;
         });
 
         if (usuario) {
