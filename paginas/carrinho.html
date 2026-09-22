@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
 
     <link rel="icon" href="../imagens/carrinho/favicon-16x16.png">
     <link rel="stylesheet" href="../css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <style>
-        .info-item > span{
+        .info-item>span {
             color: #0a4b10;
         }
     </style>
@@ -17,150 +20,171 @@
 
 <body>
 
-    <header class="cabecalho">
-
-        <div id="logo-produto">
-            
-            <a href="../index.html">
-                <img src="../imagens/SHOP-TADS.png" alt="Shop TADS" width="50" height="45">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary minha-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html"> <img src="../imagens/SHOP-TADS.png" alt="Shop TADS"
+                    width="50">
             </a>
-            <div class="dados-usuario">
-                <p><i>Olá, Mr.</i>
-                </p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div id="usuario">
-                    <a href="">Minha conta ></a>
-                </div>
-                <div>
-                    <a href="">Sair</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="ss" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <img src="../imagens/login/login.png" width="30px">
+                                <span id="nomeUsuario">Entrar / Minha conta</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li id="menuLogin"><a class="dropdown-item" href="login.html">Logar</a></li>
+                            <li id="menuCadastro"><a class="dropdown-item" href="#">Cadastrar</a></li>
+
+
+                            <li id="menuPerfil" style="display:none;">
+                                <a class="dropdown-item" href="#">Meu Perfil</a>
+                            </li>
+
+                            <li id="menuSair" style="display:none;">
+                                <a class="dropdown-item text-danger" href="#" id="btnSair">
+                                    Sair
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../paginas/carrinho.html"><img src="../imagens/carrinho/carrinho.png"
+                                width="23px"></a>
+                    </li>
+
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar produto" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
             </div>
         </div>
-
-        <div class="pesquisa">
-            <input type="search" placeholder="Buscar produto">
-            <button>Pesquisar</button>
-        </div>
-
-        <nav class="nav">
-            <a href="../index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="contato.html">Contato</a>
-              <a href="carrinho.html"><img src="../imagens/carrinho/carrinho.png" alt="carrinho"
-                    width="35px"></a>
-        </nav>
-
-    </header>
+    </nav>
 
     <main class="pagina-carrinho">
 
-    <h1>Meu Carrinho</h1>
+        <h1>Meu Carrinho</h1>
 
-    <div class="layout-carrinho">
+        <div class="layout-carrinho">
 
-        
-        <section class="itens-carrinho">
 
-            <h2>Produtos</h2>
+            <section class="itens-carrinho">
 
-            <div class="item">
+                <h2>Produtos</h2>
 
-                <img src="../imagens/produtos/Notebook-Lenovo-Ideapad-Slim-3.webp"
-                     alt="Notebook" width="90">
+                <div class="item">
 
-                <div class="info-item">
-                    <h3>Notebook Lenovo Ideapad Slim 3</h3>
-                    <span>R$ 4.899,00</span>
+                    <img src="../imagens/produtos/Notebook-Lenovo-Ideapad-Slim-3.webp" alt="Notebook" width="90">
+
+                    <div class="info-item">
+                        <h3>Notebook Lenovo Ideapad Slim 3</h3>
+                        <span>R$ 4.899,00</span>
+                    </div>
+
+                    <div class="qtd">
+                        <label>Qtd.</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+
                 </div>
 
-                <div class="qtd">
-                    <label>Qtd.</label>
-                    <input type="number" value="1" min="1">
+                <div class="item">
+
+                    <img src="../imagens/produtos/processador-amd-ryzen-7-5700x.webp" alt="Ryzen" width="90">
+
+                    <div class="info-item">
+                        <h3>Processador AMD Ryzen 7 5700X</h3>
+                        <span>R$ 1.999,00</span>
+                    </div>
+
+                    <div class="qtd">
+                        <label>Qtd.</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+
                 </div>
+
+                <div class="item">
+
+                    <img src="../imagens/produtos/monitor-gamer-asus.webp" alt="Monitor" width="90">
+
+                    <div class="info-item">
+                        <h3>Monitor Gamer ASUS ROG Strix</h3>
+                        <span>R$ 2.499,00</span>
+                    </div>
+
+                    <div class="qtd">
+                        <label>Qtd.</label>
+                        <input type="number" value="1" min="1">
+                    </div>
+
+                </div>
+
+                <a class="voltar-produtos" href="produtos.html">
+                    ← Continuar comprando
+                </a>
+
+            </section>
+
+
+            <div class="resumo">
+
+                <h2>Resumo do Pedido</h2>
+
+                <p><strong>Quantidade:</strong> 3 itens</p>
+
+                <p><strong>Subtotal:</strong> R$ 9.397,00</p>
+
+                <p><strong>Frete:</strong> Grátis</p>
+
+                <hr>
+
+                <h3>Total: <span style="color: #1b501f">$ 9.397,00</span></h3>
+
+                <a class="botao-finalizar" href="sucesso-pedido.html">
+                    Finalizar Pedido
+                </a>
 
             </div>
-
-            <div class="item">
-
-                <img src="../imagens/produtos/processador-amd-ryzen-7-5700x.webp"
-                     alt="Ryzen" width="90">
-
-                <div class="info-item">
-                    <h3>Processador AMD Ryzen 7 5700X</h3>
-                    <span>R$ 1.999,00</span>
-                </div>
-
-                <div class="qtd">
-                    <label>Qtd.</label>
-                    <input type="number" value="1" min="1">
-                </div>
-
-            </div>
-
-            <div class="item">
-
-                <img src="../imagens/produtos/monitor-gamer-asus.webp"
-                     alt="Monitor" width="90">
-
-                <div class="info-item">
-                    <h3>Monitor Gamer ASUS ROG Strix</h3>
-                    <span>R$ 2.499,00</span>
-                </div>
-
-                <div class="qtd">
-                    <label>Qtd.</label>
-                    <input type="number" value="1" min="1">
-                </div>
-
-            </div>
-
-            <a class="voltar-produtos" href="produtos.html">
-                ← Continuar comprando
-            </a>
-
-        </section>
-
-    
-        <div class="resumo">
-
-            <h2>Resumo do Pedido</h2>
-
-            <p><strong>Quantidade:</strong> 3 itens</p>
-
-            <p><strong>Subtotal:</strong> R$ 9.397,00</p>
-
-            <p><strong>Frete:</strong> Grátis</p>
-
-            <hr>
-
-            <h3>Total: <span style="color: #1b501f">$ 9.397,00</span></h3>
-
-            <a class="botao-finalizar"
-               href="sucesso-pedido.html">
-                Finalizar Pedido
-            </a>
 
         </div>
 
-    </div>
+        <section class="endereco">
 
-    <section class="endereco">
+            <h2>Endereço de Entrega</h2>
 
-        <h2>Endereço de Entrega</h2>
+            <p><strong>Nome:</strong> Anderson Torres </p>
 
-        <p><strong>Nome:</strong> Anderson Torres </p>
+            <p><strong>Endereço:</strong> Rua formosa, nº 120 </p>
 
-        <p><strong>Endereço:</strong> Rua formosa, nº 120 </p>
+            <p><strong>Bairro:</strong> Centro </p>
 
-        <p><strong>Bairro:</strong> Centro </p>
+            <p><strong>Cidade:</strong> Formosa - GO </p>
 
-        <p><strong>Cidade:</strong> Formosa - GO </p>
+            <p><strong>CEP:</strong> 73800-000 </p>
 
-        <p><strong>CEP:</strong> 73800-000 </p>
+        </section>
 
-    </section>
-
-</main>
+    </main>
 
     <footer>
 
@@ -183,6 +207,11 @@
         <p>&copy 2026 Shop TADS</p>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+        <script src="../js/javaScript.js">  </script>
 
 </body>
+
 </html>

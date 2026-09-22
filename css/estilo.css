@@ -6,98 +6,20 @@
     --fonte-padrao: Arial, Helvetica, sans-serif;
 }
 
-/*Cabeçalho*/
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 15px 30px 15px 0px;
-    background-color: var(--cor-fundo);
-    box-shadow: var(--sombra-header);
-    box-sizing: border-box;
-    z-index: 10;
+/*Cabeçalho/navebar*/
+.minha-nav {
+    box-shadow: 0 6px 25px #0129701a;
 }
 
-.logos {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    margin-left: -20px;
-}
-
-#logo-produto {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    margin-left: 20px;
+.btn-entrar-login {
+    background-color: #198754;
 
 }
 
-.dados-usuario {
-    font-size: 14px;
-    margin-left: 10px;
+.btn-entrar-login:hover {
+    background-color: #157347;
 }
 
-#usuario {
-    margin-top: -12px;
-}
-
-
-.nav {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-}
-
-.nav img{
-    width: 28px;
-    height: 25px;
-
-}
-
-.nav a {
-    text-decoration: none;
-    color: #212529;
-    font-weight: bold;
-}
-
-.nav a:hover {
-    transform: scale(1.15);
-}
-
-.pesquisa {
-    display: flex;
-    gap: 5px;
-    flex: 1;
-    max-width: 400px;
-}
-
-.pesquisa input {
-    height: 35px;
-    width: 350px;
-    box-sizing: border-box;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.pesquisa button {
-    width: 80px;
-    height: 35px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #5e6461;
-    color: #ffffff;
-}
-
-.pesquisa button:hover {
-    background-color: #232926;
-}
 
 /*Body*/
 body {
@@ -518,7 +440,7 @@ input.botao-enviar:hover {
     margin: 5px 0;
 }
 
-.sucesso-pedido > p {
+.sucesso-pedido>p {
     margin: 8px 0;
     color: #555;
 }
@@ -580,6 +502,15 @@ input.botao-enviar:hover {
     background-color: #5c636a;
 }
 
+/*login*/
+.principal-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
 
 /*tela Mobile*/
 @media (max-width: 900px) {
@@ -747,6 +678,8 @@ input.botao-enviar:hover {
     }
 
 }
+
+
 
 @media (max-width: 360px) {
 
