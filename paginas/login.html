@@ -52,7 +52,7 @@
                             <li id="menuPerfil" style="display:none;">
                                 <a class="dropdown-item" href="#">Meu Perfil</a>
                             </li>
-                             <li id="menuPedidos" style="display:none;">
+                            <li id="menuPedidos" style="display:none;">
                                 <a class="dropdown-item" href="pedidos.html">Meus Pedidos</a>
                             </li>
 
@@ -96,12 +96,14 @@
         <form id="form-login">
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail *</label>
-                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Digite seu e-mail" required>
-                <div id="emailHelp" class="form-text" >Nós nunca iremos compartilhar seu e-mail com ninguém.</div>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                    placeholder="Digite seu e-mail" required>
+                <div id="emailHelp" class="form-text">Nós nunca iremos compartilhar seu e-mail com ninguém.</div>
             </div>
             <div class="mb-3">
                 <label for="senha" class="form-label">Senha *</label>
-                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha" required>
+                <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha"
+                    required>
             </div>
             <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="mostrarSenha" name="checar">
@@ -144,6 +146,23 @@
 
     <script src="../js/script.js"></script>
 
+
+    <div class="modal fade" id="modalSucesso" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Login</h5>
+                </div>
+
+                <div class="modal-body text-center">
+                    <h4>✅ Login realizado com sucesso!</h4>
+                    <p class="mb-0">Redirecionando...</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

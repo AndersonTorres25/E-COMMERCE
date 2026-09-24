@@ -11,6 +11,11 @@ const usuarios = [
         nome: "Anderson",
         email: "anderson@email.com",
         senha: "123"
+    },
+    {
+        nome: "ADM",
+        email: "a@mail",
+        senha: "123"
     }
 ];
 
@@ -38,9 +43,19 @@ if (formulario) {
                 JSON.stringify(usuario)
             );
 
-            alert("Login realizado com sucesso!");
+            //alert("Login realizado com sucesso!");
 
-            window.location.href = "../index.html";
+            //window.location.href = "../index.html";
+
+            const modal = new bootstrap.Modal(
+                document.getElementById("modalSucesso")
+            );
+
+            modal.show();
+
+            setTimeout(function () {
+                window.location.href = "../index.html";
+            }, 3000);
 
         } else {
 
