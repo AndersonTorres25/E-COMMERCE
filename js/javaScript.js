@@ -1,5 +1,5 @@
 
-//ANCO DE USUÁRIOS
+// BANCO DE USUÁRIOS
 
 const usuarios = [
     {

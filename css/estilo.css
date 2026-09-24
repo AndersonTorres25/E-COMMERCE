@@ -41,39 +41,27 @@ main {
     margin: 0;
 }
 
-.banner {
-    background-image: url("../imagens/index/BANNER.PNG");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    max-width: 1200px;
-    height: 380px;
-    margin: -25px auto 10px auto;
-    position: relative;
-
-}
-
 .botoes-banner {
     position: absolute;
-    bottom: 40px;
-    left: 140px;
+    bottom: 70px;
+    left: 100px;
     display: flex;
-    gap: 15px;
+    gap: 40px;
     z-index: 2;
 }
 
 .botoes-banner a {
     display: inline-flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 5px 20px 5px 20px;
     background-color: var(--cor-verde);
     color: #ffffff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 15px;
     border: 1px solid #198754;
 }
 
@@ -516,14 +504,14 @@ input.botao-enviar:hover {
 @media (max-width: 900px) {
 
     .botoes-banner {
-        left: 50px;
-        bottom: 65px;
+        left: 60px;
+        bottom: 49px;
         gap: 10px;
     }
 
     .botoes-banner a {
-        padding: 8px 11px;
-        font-size: 13px;
+        padding: 4px 8px;
+        font-size: 12px;
     }
 
     .nav {
@@ -544,13 +532,13 @@ input.botao-enviar:hover {
     }
 
     .botoes-banner {
-        left: 43px;
-        bottom: 95px;
+        left: 49px;
+        bottom: 35px;
         gap: 10px;
     }
 
     .botoes-banner a {
-        padding: 6px 12px;
+        padding: 4px 8px;
         font-size: 11px;
     }
 
@@ -585,13 +573,13 @@ input.botao-enviar:hover {
     }
 
     .botoes-banner {
-        left: 35px;
-        bottom: 100px;
+        left: 39px;
+        bottom: 22px;
         gap: 10px;
     }
 
     .botoes-banner a {
-        padding: 6px 12px;
+        padding: 4px 8px;
         font-size: 11px;
     }
 
@@ -645,13 +633,13 @@ input.botao-enviar:hover {
 @media (max-width: 440px) {
 
     .botoes-banner {
-        left: 23px;
-        bottom: 125px;
+        left: 28px;
+        bottom: 18px;
         gap: 6px;
     }
 
     .botoes-banner a {
-        padding: 5px 9px;
+        padding: 4px 7px;
         font-size: 6px;
     }
 
@@ -684,14 +672,14 @@ input.botao-enviar:hover {
 @media (max-width: 360px) {
 
     .botoes-banner {
-        left: 17px;
-        bottom: 135px;
+        left: 25px;
+        bottom: 15px;
         gap: 6px;
     }
 
     .botoes-banner a {
-        padding: 5px 9px;
-        font-size: 6px;
+        padding: 2px 7px;
+        font-size: 5px;
     }
 
     footer p {
@@ -700,8 +688,34 @@ input.botao-enviar:hover {
 
 
     .redes-sociais img {
-        width: 22px;
-        height: 22px;
+        width: 18px;
+        height: 18px;
+
+    }
+
+}
+
+@media (max-width: 250px) {
+
+    .botoes-banner {
+        left: 17px;
+        bottom: 8px;
+        gap: 6px;
+    }
+
+    .botoes-banner a {
+        padding: 2px 5px;
+        font-size: 4px;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+
+    .redes-sociais img {
+        width: 16px;
+        height: 16px;
 
     }
 
