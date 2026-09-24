@@ -69,6 +69,7 @@ function atualizarNavbar() {
     document.querySelector("#menuCadastro").style.display = "none";
 
     document.querySelector("#menuPerfil").style.display = "block";
+    document.querySelector("#menuPedidos").style.display = "block";
     document.querySelector("#menuSair").style.display = "block";
 
 }
