@@ -490,6 +490,11 @@ input.botao-enviar:hover {
     background-color: #5c636a;
 }
 
+/*Cadastro usuário*/
+.card {
+    box-shadow: 0 4px 15px #00000033;
+}
+
 /*login*/
 .principal-login {
     display: flex;

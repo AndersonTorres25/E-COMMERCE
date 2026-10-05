@@ -1,4 +1,28 @@
 
+
+const formularioCadastro = document.querySelector("#form-cadastro");
+
+formularioCadastro.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nome = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    const senha = document.querySelector("#senha").value;
+    const confirmarSenha = document.querySelector("#confirmarSenha").value;
+
+    if (senha !== confirmarSenha) {
+        alert("As senhas não são iguais.");
+        return;
+    }
+
+});
+
+
+
+
+
+
+
+
 // BANCO DE USUÁRIOS
 
 const usuarios = [
