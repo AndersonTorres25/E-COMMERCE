@@ -131,34 +131,42 @@ if (mostrar) {
 
 const formularioCadastro = document.querySelector("#form-cadastro");
 
-formularioCadastro.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const nome = document.querySelector("#nome").value;
-    const email = document.querySelector("#email").value;
-    const senha = document.querySelector("#senha").value;
-    const confirmarSenha = document.querySelector("#confirmarSenha").value;
+if (formularioCadastro) {
 
-    if (senha !== confirmarSenha) {
-        alert("As senhas não são iguais.");
-        return;
-    }
+    formularioCadastro.addEventListener("submit", function (e) {
 
-    const usuarioExiste = usuarios.find(function (u) {
-        return u.email.toUpperCase() === email.toUpperCase();
+        e.preventDefault();
+
+        const nome = document.querySelector("#nome").value;
+        const email = document.querySelector("#email").value;
+        const senha = document.querySelector("#senha").value;
+        const confirmarSenha = document.querySelector("#confirmarSenha").value;
+
+        if (senha !== confirmarSenha) {
+            alert("As senhas não são iguais.");
+            return;
+        }
+
+        const usuarioExiste = usuarios.find(function (u) {
+            return u.email.toUpperCase() === email.toUpperCase();
+        });
+
+        if (usuarioExiste) {
+            alert("Este e-mail já está cadastrado.");
+            return;
+        }
+
+        usuarios.push({
+            nome: nome,
+            email: email,
+            senha: senha
+        });
+
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
     });
 
-    if (usuarioExiste) {
-        alert("Este e-mail já está cadastrado.");
-        return;
-    }
-    usuarios.push({
-        nome: nome,
-        email: email,
-        senha: senha
-    });
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-});
+}
 
 
 
