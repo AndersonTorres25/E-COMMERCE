@@ -128,6 +128,7 @@ if (mostrar) {
 
 }
 
+/* Cadastro de usuário*/
 
 const formularioCadastro = document.querySelector("#form-cadastro");
 
@@ -163,6 +164,18 @@ if (formularioCadastro) {
         });
 
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+        const modal = new bootstrap.Modal(
+            document.getElementById("modalCadastro")
+        );
+
+        modal.show();
+
+        formularioCadastro.reset();
+
+        setTimeout(function () {
+            window.location.href = "../index.html";
+        }, 2000);
 
     });
 
