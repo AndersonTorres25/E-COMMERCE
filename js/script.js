@@ -1,31 +1,8 @@
 
 
-const formularioCadastro = document.querySelector("#form-cadastro");
-
-formularioCadastro.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const nome = document.querySelector("#nome").value;
-    const email = document.querySelector("#email").value;
-    const senha = document.querySelector("#senha").value;
-    const confirmarSenha = document.querySelector("#confirmarSenha").value;
-
-    if (senha !== confirmarSenha) {
-        alert("As senhas não são iguais.");
-        return;
-    }
-
-});
-
-
-
-
-
-
-
-
 // BANCO DE USUÁRIOS
 
-const usuarios = [
+let usuarios = [
     {
         nome: "Administrador",
         email: "admin@shop.com",
@@ -43,8 +20,47 @@ const usuarios = [
     }
 ];
 
-// LOGIN
+const usuariosSalvos = localStorage.getItem("usuarios");
 
+if (usuariosSalvos) {
+    usuarios = JSON.parse(usuariosSalvos);
+}
+
+
+const formularioCadastro = document.querySelector("#form-cadastro");
+
+formularioCadastro.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nome = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    const senha = document.querySelector("#senha").value;
+    const confirmarSenha = document.querySelector("#confirmarSenha").value;
+
+    if (senha !== confirmarSenha) {
+        alert("As senhas não são iguais.");
+        return;
+    }
+
+    const usuarioExiste = usuarios.find(function (u) {
+        return u.email.toUpperCase() === email.toUpperCase();
+    });
+
+    if (usuarioExiste) {
+        alert("Este e-mail já está cadastrado.");
+        return;
+    }
+    usuarios.push({
+        nome: nome,
+        email: email,
+        senha: senha
+    });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+});
+
+
+
+// LOGIN
 const formulario = document.querySelector("#form-login");
 
 if (formulario) {
