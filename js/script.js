@@ -49,10 +49,6 @@ if (formulario) {
                 JSON.stringify(usuario)
             );
 
-            //alert("Login realizado com sucesso!");
-
-            //window.location.href = "../index.html";
-
             const modal = new bootstrap.Modal(
                 document.getElementById("modalSucesso")
             );
