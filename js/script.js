@@ -268,7 +268,7 @@ const produtos = [
 
 ];
 
-/* Lista de produtos */
+/* Listar os produtos */
 const listaProdutos = document.querySelector("#listaProdutos");
 
 if (listaProdutos) {
@@ -311,7 +311,7 @@ if (listaProdutos) {
 
         `;
 
-    }); 
+    });
 
 }
 
@@ -412,8 +412,14 @@ function mostrarCarrinho() {
                     <label>Qtd.</label>
 
                     <input type="number"
+                        class="input-quantidade"
+                        data-id="${produto.id}"
                         value="${produto.quantidade}"
-                        min="1">
+                        min="0">
+
+                    <button class="btn btn-danger btn-sm btn-remover" data-id="${produto.id}" title="Remover produto">
+                        &times;
+                    </button>
 
                 </div>
 
@@ -464,6 +470,50 @@ function atualizarResumoCarrinho() {
 }
 
 atualizarResumoCarrinho();
+
+/*Aumentar quantidade pelo campo*/
+
+const camposQuantidade = document.querySelectorAll(".input-quantidade");
+
+camposQuantidade.forEach(function (campo) {
+
+    campo.addEventListener("change", function () {
+
+        const id = Number(campo.dataset.id);
+
+        const novaQuantidade = Number(campo.value);
+
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        const produto = carrinho.find(function (p) {
+            return p.id === id;
+        });
+
+        if (produto) {
+
+            if (novaQuantidade === 0) {
+
+                carrinho = carrinho.filter(function (p) {
+                    return p.id !== id;
+                });
+
+            } else {
+
+                produto.quantidade = novaQuantidade;
+
+            }
+
+        }
+
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        atualizarCarrinho();
+
+        atualizarResumoCarrinho();
+
+    });
+
+});
 
 
 
