@@ -268,6 +268,7 @@ const produtos = [
 
 ];
 
+/* Lista de produtos */
 const listaProdutos = document.querySelector("#listaProdutos");
 
 if (listaProdutos) {
@@ -298,7 +299,7 @@ if (listaProdutos) {
                             <strong>R$ ${produto.preco.toFixed(2).replace(".", ",")}</strong>
                         </p>
 
-                        <button class="btn btn-success">
+                        <button class="btn btn-success btn-adicionar" data-id="${produto.id}">
                             Adicionar ao carrinho
                         </button>
 
@@ -313,6 +314,36 @@ if (listaProdutos) {
     });
 
 }
+
+const botoesAdicionar = document.querySelectorAll(".btn-adicionar");
+
+botoesAdicionar.forEach(function (botao) {
+
+    botao.addEventListener("click", function () {
+
+        const id = Number(botao.dataset.id);
+
+        const produto = produtos.find(function (p) {
+            return p.id === id;
+        });
+
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        carrinho.push({
+            id: produto.id,
+            nome: produto.nome,
+            preco: produto.preco,
+            imagem: produto.imagem,
+            quantidade: 1
+        });
+
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        console.log("Carrinho:", carrinho);
+
+    });
+
+});
 
 
 
