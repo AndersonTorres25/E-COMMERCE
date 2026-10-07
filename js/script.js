@@ -539,7 +539,6 @@ function ativarCamposQuantidade() {
 
 }
 
-ativarCamposQuantidade();
 
 /* Remover produto do carrinho */
 
