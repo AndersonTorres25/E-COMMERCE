@@ -353,7 +353,7 @@ botoesAdicionar.forEach(function (botao) {
 
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-        console.log("Carrinho:", carrinho);
+        atualizarCarrinho();
 
     });
 
@@ -387,6 +387,25 @@ function mostrarCarrinho() {
 
     if (!listaCarrinho) return;
 
+    listaCarrinho.innerHTML = "";
+
+    if (carrinho.length === 0) {
+
+        listaCarrinho.innerHTML = `
+        <div class="text-center p-4">
+
+            <h3>🛒 Seu carrinho está vazio.</h3>
+
+            <a href="produtos.html" class="btn btn-success mt-3">
+                Continuar comprando
+            </a>
+
+        </div>
+    `;
+
+        return;
+    }
+
     carrinho.forEach(function (produto) {
 
         listaCarrinho.innerHTML += `
@@ -415,7 +434,7 @@ function mostrarCarrinho() {
                         class="input-quantidade"
                         data-id="${produto.id}"
                         value="${produto.quantidade}"
-                        min="0">
+                        min="1">
 
                     <button class="btn btn-danger btn-sm btn-remover" data-id="${produto.id}" title="Remover produto">
                         &times;
@@ -428,6 +447,7 @@ function mostrarCarrinho() {
         `;
 
     });
+    ativarCamposQuantidade();
 }
 
 mostrarCarrinho();
@@ -473,43 +493,73 @@ atualizarResumoCarrinho();
 
 /*Aumentar quantidade pelo campo*/
 
-const camposQuantidade = document.querySelectorAll(".input-quantidade");
+function ativarCamposQuantidade() {
 
-camposQuantidade.forEach(function (campo) {
+    const camposQuantidade = document.querySelectorAll(".input-quantidade");
 
-    campo.addEventListener("change", function () {
+    camposQuantidade.forEach(function (campo) {
 
-        const id = Number(campo.dataset.id);
+        campo.addEventListener("change", function () {
 
-        const novaQuantidade = Number(campo.value);
+            const id = Number(campo.dataset.id);
 
-        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+            const novaQuantidade = Number(campo.value);
 
-        const produto = carrinho.find(function (p) {
-            return p.id === id;
-        });
+            let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-        if (produto) {
+            const produto = carrinho.find(function (p) {
+                return p.id === id;
+            });
 
-            if (novaQuantidade === 0) {
+            if (produto) {
 
-                carrinho = carrinho.filter(function (p) {
-                    return p.id !== id;
-                });
+                if (novaQuantidade === 0) {
 
-            } else {
+                    carrinho = carrinho.filter(function (p) {
+                        return p.id !== id;
+                    });
 
-                produto.quantidade = novaQuantidade;
+                } else {
+
+                    produto.quantidade = novaQuantidade;
+
+                }
 
             }
 
-        }
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+            atualizarCarrinho();
+
+            atualizarResumoCarrinho();
+
+        });
+
+    });
+
+}
+
+ativarCamposQuantidade();
+
+/* Remover produto do carrinho */
+
+const botoesRemover = document.querySelectorAll(".btn-remover");
+
+botoesRemover.forEach(function (botao) {
+
+    botao.addEventListener("click", function () {
+
+        const id = Number(botao.dataset.id);
+
+        let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        carrinho = carrinho.filter(function (produto) {
+            return produto.id !== id;
+        });
 
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
-        atualizarCarrinho();
-
-        atualizarResumoCarrinho();
+        location.reload();
 
     });
 
