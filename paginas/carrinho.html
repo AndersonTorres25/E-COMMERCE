@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="../css/estilo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <style>
         .info-item>span {
             color: #0a4b10;
         }
+
+       
     </style>
 
 </head>
@@ -37,7 +40,7 @@
                         <a class="nav-link dropdown-toggle" href="ss" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img src="../imagens/login/login.png" width="30px">
-                                <span id="nomeUsuario">Entrar / Cadastrar</span>
+                            <span id="nomeUsuario">Entrar / Cadastrar</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li id="menuLogin"><a class="dropdown-item" href="login.html">Login</a></li>
@@ -47,7 +50,7 @@
                             <li id="menuPerfil" style="display:none;">
                                 <a class="dropdown-item" href="meus-dados.html">Meus dados</a>
                             </li>
-                             <li id="menuPedidos" style="display:none;">
+                            <li id="menuPedidos" style="display:none;">
                                 <a class="dropdown-item" href="meus-pedidos.html">Meus Pedidos</a>
                             </li>
 
@@ -70,8 +73,15 @@
                         <a class="nav-link" href="../paginas/contato.html">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../paginas/carrinho.html"><img src="../imagens/carrinho/carrinho.png"
-                                width="23px"></a>
+                        <a class="nav-link position-relative" href="../paginas/carrinho.html">
+
+                            <img id="iconeCarrinho" src="../imagens/carrinho/carrinho.png" width="23px" alt="Carrinho">
+
+                            <span id="badgeCarrinho" class="position-absolute badge rounded-pill bg-danger">
+                                0
+                            </span>
+
+                        </a>
                     </li>
 
 
@@ -214,7 +224,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="../js/script.js">  </script>
+    <script src="../js/script.js">  </script>
 
 </body>
 
