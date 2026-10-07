@@ -426,5 +426,44 @@ function mostrarCarrinho() {
 
 mostrarCarrinho();
 
+/*Atualiar resumo do carrinho*/
+
+function atualizarResumoCarrinho() {
+
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    let quantidadeTotal = 0;
+    let subtotal = 0;
+
+    carrinho.forEach(function (produto) {
+
+        quantidadeTotal += produto.quantidade;
+
+        subtotal += produto.preco * produto.quantidade;
+
+    });
+
+    const quantidade = document.querySelector("#quantidadeCarrinho");
+    const subtotalElemento = document.querySelector("#subtotalCarrinho");
+    const total = document.querySelector("#totalCarrinho");
+
+    if (quantidade) {
+        quantidade.textContent = quantidadeTotal;
+    }
+
+    if (subtotalElemento) {
+        subtotalElemento.textContent =
+            "R$ " + subtotal.toFixed(2).replace(".", ",");
+    }
+
+    if (total) {
+        total.textContent =
+            "R$ " + subtotal.toFixed(2).replace(".", ",");
+    }
+
+}
+
+atualizarResumoCarrinho();
+
 
 
