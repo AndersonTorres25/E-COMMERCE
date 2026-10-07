@@ -311,7 +311,7 @@ if (listaProdutos) {
 
         `;
 
-    }); s
+    }); 
 
 }
 
@@ -378,6 +378,53 @@ function atualizarCarrinho() {
 }
 
 atualizarCarrinho();
+
+function mostrarCarrinho() {
+
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const listaCarrinho = document.querySelector("#listaCarrinho");
+
+    if (!listaCarrinho) return;
+
+    carrinho.forEach(function (produto) {
+
+        listaCarrinho.innerHTML += `
+
+            <div class="item">
+
+                <img src="${produto.imagem}"
+                    alt="${produto.nome}"
+                    width="90">
+
+                <div class="info-item">
+
+                    <h3>${produto.nome}</h3>
+
+                    <span>
+                        R$ ${produto.preco.toFixed(2).replace(".", ",")}
+                    </span>
+
+                </div>
+
+                <div class="qtd">
+
+                    <label>Qtd.</label>
+
+                    <input type="number"
+                        value="${produto.quantidade}"
+                        min="1">
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+}
+
+mostrarCarrinho();
 
 
 
