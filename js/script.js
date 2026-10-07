@@ -177,6 +177,18 @@ if (formularioCadastro) {
 
 }
 
+// MOSTRAR DADOS DO USUÁRIO
+
+const dadosUsuario = localStorage.getItem("usuarioLogado");
+
+if (dadosUsuario) {
+
+    const usuario = JSON.parse(dadosUsuario);
+
+    document.querySelector("#dadosNome").innerHTML = usuario.nome;
+    document.querySelector("#dadosEmail").textContent = usuario.email;
+
+}
 
 
 
