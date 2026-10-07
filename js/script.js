@@ -185,8 +185,16 @@ if (dadosUsuario) {
 
     const usuario = JSON.parse(dadosUsuario);
 
-    document.querySelector("#dadosNome").textContent = usuario.nome;
-    document.querySelector("#dadosEmail").textContent = usuario.email;
+    const dadosNome = document.querySelector("#dadosNome");
+    const dadosEmail = document.querySelector("#dadosEmail");
+
+    if (dadosNome) {
+        dadosNome.textContent = usuario.nome;
+    }
+
+    if (dadosEmail) {
+        dadosEmail.textContent = usuario.email;
+    }
 
 }
 
