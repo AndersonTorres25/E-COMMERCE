@@ -396,8 +396,6 @@ function mostrarCarrinho() {
 
             <h3>🛒 Seu carrinho está vazio.</h3>
 
-            
-
         </div>
     `;
 
