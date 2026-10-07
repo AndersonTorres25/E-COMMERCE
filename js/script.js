@@ -396,9 +396,7 @@ function mostrarCarrinho() {
 
             <h3>🛒 Seu carrinho está vazio.</h3>
 
-            <a href="produtos.html" class="btn btn-success mt-3">
-                Continuar comprando
-            </a>
+            
 
         </div>
     `;
