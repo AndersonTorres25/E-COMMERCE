@@ -150,6 +150,7 @@ footer p {
 }
 
 input.botao-enviar {
+    color: #ffffff;
     margin-top: 10px;
     padding: 12px;
     width: 100%;
@@ -164,6 +165,7 @@ input.botao-enviar {
 
 input.botao-enviar:hover {
     background-color: var(--cor-verde-hover);
+    color: #ffffff;
 }
 
 /*Contato-sucesso*/
@@ -175,6 +177,11 @@ input.botao-enviar:hover {
     box-sizing: border-box;
 }
 
+#corpo-envio .card {
+    border-radius: 12px;
+    box-shadow: 0 10px 15px 10px #2a523326;
+}
+
 .envio {
     width: 100%;
     max-width: 500px;
@@ -182,8 +189,6 @@ input.botao-enviar:hover {
     padding: 30px;
     background: linear-gradient(45deg, #0B6B3A, #16A085, #7DCEA0);
     border: 1px solid #1a751a;
-    border-radius: 12px;
-    box-shadow: 0 25px 30px #00000026;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,6 +196,8 @@ input.botao-enviar:hover {
     text-align: center;
     box-sizing: border-box;
 }
+
+
 
 .envio h1 {
     font-size: 24px;

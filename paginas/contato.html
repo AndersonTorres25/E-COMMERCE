@@ -28,10 +28,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown dropdown-usuario">
-                        <a class="nav-link dropdown-toggle" href="ss" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <img src="../imagens/login/login.png" width="30px"> 
-                                <span id="nomeUsuario">Entrar / Cadastrar</span>
+                            <img src="../imagens/login/login.png" width="30px">
+                            <span id="nomeUsuario">Entrar / Cadastrar</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li id="menuLogin"><a class="dropdown-item" href="login.html">Login</a></li>
@@ -41,7 +41,7 @@
                             <li id="menuPerfil" style="display:none;">
                                 <a class="dropdown-item" href="meus-dados.html">Meus dados</a>
                             </li>
-                             <li id="menuPedidos" style="display:none;">
+                            <li id="menuPedidos" style="display:none;">
                                 <a class="dropdown-item" href="meus-pedidos.html">Meus Pedidos</a>
                             </li>
 
@@ -86,30 +86,34 @@
 
     <main class="contato">
         <form class="formulario" method="get" action="sucesso-contato.html">
-            <h1>Entre em contato</h1>
+            <div class="mb-3">
+                <h1>Entre em contato</h1>
 
-            <label>Nome *</label>
-            <input type="text" name="nome" required autofocus placeholder="Digite um nome" />
+                <label class="form-label">Nome *</label>
+                <input type="text" class="form-control" name="nome" required autofocus placeholder="Digite um nome" />
 
 
-            <label>E-mail *</label>
-            <input type="email" name="email" required placeholder="Digite um e-mail">
+                <label class="form-label">E-mail *</label>
+                <input type="email" class="form-control" name="email" required placeholder="Digite um e-mail">
 
-            <label>Telefone</label>
-            <input type="tel" name="Telefone" pattern="[0-9]{10,11}" placeholder="Digite um numero de telefone" />
+                <label class="form-label">Telefone</label>
+                <input type="tel" class="form-control" name="Telefone" pattern="[0-9]{10,11}"
+                    placeholder="Digite somente números (DDD + telefone)"
+                    title="Digite 10 ou 11 números, incluindo o DDD." />
 
-            <label for="assunto">Assunto</label>
-            <select id="assunto" name="assunto">
-                <option value="none" disabled selected>selecione um assunto</option>
-                <option>Compra</option>
-                <option>Suporte</option>
-                <option>Troca</option>
-                <option>Outros</option>
-            </select>
-            <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" rows="8" cols="40" placeholder="Digite o texto aqui."></textarea>
-            <input class="botao-enviar" type="submit" value="Enviar mensagem" />
-
+                <label for="assunto" class="form-label">Assunto</label>
+                <select class="form-select" id="assunto" name="assunto">
+                    <option value="none" disabled selected>selecione um assunto</option>
+                    <option>Compra</option>
+                    <option>Suporte</option>
+                    <option>Troca</option>
+                    <option>Outros</option>
+                </select>
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" name="mensagem" rows="8" cols="40"
+                    placeholder="Digite o texto aqui."></textarea>
+                <input class="btn btn-success botao-enviar" type="submit" value="Enviar mensagem" />
+            </div>
         </form>
 
     </main>
