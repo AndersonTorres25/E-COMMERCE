@@ -628,3 +628,10 @@ input.botao-enviar:hover {
     }
 
 }
+
+@media (min-width: 992px) {
+    .dropdown-usuario:hover > .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
