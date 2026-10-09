@@ -44,31 +44,13 @@ main {
 
 .botoes-banner {
     position: absolute;
-    bottom: 100px;
-    left: 90px;
-    display: flex;
-    gap: 30px;
+    bottom: 17%;
+    left: 7%;
     z-index: 2;
+
 }
 
-.botoes-banner a {
-    display: inline-flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 8px 25px 8px 25px;
-    background-color: var(--cor-verde);
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    border-radius: 15px;
-    border: 1px solid #198754;
-}
 
-.botoes-banner a:hover {
-    background-color: var(--cor-verde-hover);
-}
 
 /*Produtos*/
 .imagem-produto {
