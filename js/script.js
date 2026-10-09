@@ -187,6 +187,7 @@ if (dadosUsuario) {
 
     const dadosNome = document.querySelector("#dadosNome");
     const dadosEmail = document.querySelector("#dadosEmail");
+    const nomeUsuEnd = document.querySelector("#nomeUsu");
 
     if (dadosNome) {
         dadosNome.textContent = usuario.nome;
@@ -194,6 +195,9 @@ if (dadosUsuario) {
 
     if (dadosEmail) {
         dadosEmail.textContent = usuario.email;
+    }
+    if (nomeUsuEnd) {
+        nomeUsuEnd.textContent = usuario.nome;
     }
 
 }
@@ -315,6 +319,18 @@ if (listaProdutos) {
 
 }
 
+/* TOAST DO CARRINHO */
+
+const elementoToast = document.querySelector("#toastCarrinho");
+
+let toastCarrinho = null;
+
+if (elementoToast && typeof bootstrap !== "undefined") {
+    toastCarrinho = new bootstrap.Toast(elementoToast, {
+        delay: 3000
+    });
+}
+
 /*adicionar produto ao carrinho*/
 
 const botoesAdicionar = document.querySelectorAll(".btn-adicionar");
@@ -354,6 +370,10 @@ botoesAdicionar.forEach(function (botao) {
         localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
         atualizarCarrinho();
+
+        if (toastCarrinho) {
+            toastCarrinho.show();
+        }
 
     });
 
@@ -560,5 +580,34 @@ botoesRemover.forEach(function (botao) {
 
 });
 
+
+// FINALIZAR PEDIDO
+
+const btnFinalizar = document.querySelector("#btnFinalizar");
+
+if (btnFinalizar) {
+
+    btnFinalizar.addEventListener("click", function (e) {
+
+        const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+        if (carrinho.length === 0) {
+
+            e.preventDefault();
+
+            alert("Seu carrinho está vazio. Adicione produtos antes de finalizar o pedido.");
+
+            return;
+
+        }
+
+        localStorage.setItem(
+            "pedidoFinalizado",
+            JSON.stringify(carrinho)
+        );
+
+    });
+
+}
 
 
