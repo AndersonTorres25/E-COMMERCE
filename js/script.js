@@ -79,8 +79,7 @@ function atualizarNavbar() {
 
     const usuario = JSON.parse(dados);
 
-    document.querySelector("#nomeUsuario").innerHTML =
-        usuario.nome;
+    document.querySelector("#nomeUsuario").innerHTML = usuario.nome;
 
     document.querySelector("#menuLogin").style.display = "none";
     document.querySelector("#menuCadastro").style.display = "none";
@@ -93,6 +92,8 @@ function atualizarNavbar() {
 
 atualizarNavbar();
 
+
+//botão sair
 const btnSair = document.querySelector("#btnSair");
 
 if (btnSair) {
@@ -106,6 +107,8 @@ if (btnSair) {
     });
 
 }
+
+//Check mostrar senha
 const mostrar = document.querySelector("#mostrarSenha");
 
 if (mostrar) {
@@ -124,8 +127,7 @@ if (mostrar) {
 
 }
 
-/* Cadastro de usuário*/
-
+//Cadastro de usuário
 const formularioCadastro = document.querySelector("#form-cadastro");
 
 if (formularioCadastro) {
@@ -178,7 +180,6 @@ if (formularioCadastro) {
 }
 
 // MOSTRAR DADOS DO USUÁRIO
-
 const dadosUsuario = localStorage.getItem("usuarioLogado");
 
 if (dadosUsuario) {
@@ -272,7 +273,7 @@ const produtos = [
 
 ];
 
-/* Listar os produtos */
+//Listar os produtos
 const listaProdutos = document.querySelector("#listaProdutos");
 
 if (listaProdutos) {
@@ -319,8 +320,7 @@ if (listaProdutos) {
 
 }
 
-/* TOAST DO CARRINHO */
-
+//TOAST DO CARRINHO
 const elementoToast = document.querySelector("#toastCarrinho");
 
 let toastCarrinho = null;
@@ -331,8 +331,7 @@ if (elementoToast && typeof bootstrap !== "undefined") {
     });
 }
 
-/*adicionar produto ao carrinho*/
-
+//adicionar produto ao carrinho
 const botoesAdicionar = document.querySelectorAll(".btn-adicionar");
 
 botoesAdicionar.forEach(function (botao) {
@@ -379,6 +378,8 @@ botoesAdicionar.forEach(function (botao) {
 
 });
 
+
+
 function atualizarCarrinho() {
 
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -396,6 +397,8 @@ function atualizarCarrinho() {
         badge.textContent = quantidadeTotal;
     }
 }
+
+
 
 atualizarCarrinho();
 
@@ -468,8 +471,9 @@ function mostrarCarrinho() {
 
 mostrarCarrinho();
 
-/*Atualiar resumo do carrinho*/
 
+
+//Atualiar resumo do carrinho
 function atualizarResumoCarrinho() {
 
     const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
@@ -507,8 +511,7 @@ function atualizarResumoCarrinho() {
 
 atualizarResumoCarrinho();
 
-/*Aumentar quantidade pelo campo*/
-
+//Aumentar quantidade pelo campo
 function ativarCamposQuantidade() {
 
     const camposQuantidade = document.querySelectorAll(".input-quantidade");
@@ -556,7 +559,7 @@ function ativarCamposQuantidade() {
 }
 
 
-/* Remover produto do carrinho */
+//Remover produto do carrinho
 
 const botoesRemover = document.querySelectorAll(".btn-remover");
 
@@ -581,8 +584,7 @@ botoesRemover.forEach(function (botao) {
 });
 
 
-// FINALIZAR PEDIDO
-
+//FINALIZAR PEDIDO
 const btnFinalizar = document.querySelector("#btnFinalizar");
 
 if (btnFinalizar) {
